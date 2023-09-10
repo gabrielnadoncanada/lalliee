@@ -1,0 +1,31 @@
+# See dos how to configure the bundle: https://symfony.com/doc/current/bundles/LiipImagineBundle/basic-usage.html
+liip_imagine:
+    driver: "gd"
+    resolvers:
+        default:
+            web_path:
+                web_root: "%kernel.project_dir%/public/"
+                cache_prefix: media/cache
+    loaders:
+        default:
+            filesystem:
+                data_root:
+                    - "%kernel.project_dir%/public/uploads/files"
+    filter_sets :
+        cache : ~
+        chien_featured :
+            quality : 75
+            filters :
+                thumbnail: { size : [370, 290]}
+        chien:
+            quality: 75
+            filters:
+                thumbnail: { size: [370, 370]}
+        chien_footer:
+            quality: 75
+            filters:
+                thumbnail: { size: [178, 178]}
+        partenaire:
+            quality: 75
+            filters:
+                thumbnail: { size: [120, 114]}

@@ -1,0 +1,42 @@
+<ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion toggled" id="accordionSidebar">
+    <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/admin">
+        <div class=" mx-3">WCM</div>
+    </a>
+    <hr class="sidebar-divider my-0">
+    <hr class="sidebar-divider">
+    <li class="nav-item">
+        <a class="nav-link" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true"
+           aria-controls="collapseTwo">
+            <i class="fas fa-fw fa-cog"></i>
+            <span>Interface</span>
+        </a>
+        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar"
+             style="">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <h6 class="collapse-header">Modules</h6>
+                <a class="collapse-item {{ 'services' in app.request.requesturi|split('/') ? 'active' }}"
+                   href="/admin/services">Services</a>
+                <a class="collapse-item {{ 'chiens' in app.request.requesturi|split('/') ? 'active' }}"
+                   href="/admin/chiens">Chiens</a>
+                <a class="collapse-item {{ 'partenaires' in app.request.requesturi|split('/') ? 'active' }}"
+                   href="/admin/partenaires">Partenaires</a>
+                <a class="collapse-item {{ 'faqs' in app.request.requesturi|split('/') ? 'active' }}"
+                   href="/admin/faqs">FAQs</a>
+                <a class="collapse-item {{ 'equipes' in app.request.requesturi|split('/') ? 'active' }}"
+                   href="/admin/equipes">Equipes</a>
+            </div>
+{#            {{ app.request.pathInfo|split('/')  }}#}
+{#            {{ dump(app.request.requesturi|split('/') in ['services'] ? 'true' : 'false') }}#}
+
+        </div>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="/admin/filemanager">
+            <i class="fas fa-photo-video"></i>
+            <span>Media</span>
+        </a>
+    </li>
+    <div class="text-center d-none mt-auto d-md-inline">
+        <button class="rounded-circle border-0" id="sidebarToggle"></button>
+    </div>
+</ul>

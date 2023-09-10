@@ -1,0 +1,23 @@
+project:
+  project: Projet
+  id: Id
+  title: Titre du projet
+  subtitle: Sous titre
+  description: Description
+  images: Images
+  tag: Type de projet
+  credit: Crédit photo
+  tags:
+    all: Tous
+    kitchen: Cuisine
+    bathroom: Salle de bain
+    tailored: Sur mesure
+  createdAt: Création
+  updatedAt: Modification
+  next: Prochain projet
+  nextMobile: Suivant
+  intro:
+    all: Des projets uniques, comme vous !
+    kitchen: La cuisine, là où les saveurs et les arômes naissent. Là où l’on savoure et célèbre la vie.
+    bathroom: Là ou l’intimité rejoint l’aspect pratique de l’espace détente.
+    tailored: Projets exaltés ou simple rangement, la création sera au rendez-vous.

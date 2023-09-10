@@ -1,0 +1,18 @@
+image:
+  id: Id
+  image: Images
+  title: Titre de l'image
+  alt: Alternative de l'image
+  principal: Image principal
+  choose: Choisissez l'image
+  errors:
+    noRecord: Aucune image
+  action:
+    addImage: Add image
+    removeImage: Delete image
+    import: Import image
+    setPrincipal: Mark as principal
+  createdAt: Création
+  updatedAt: Modification
+  thumbnail: Aperçu
+  edit: Modification de l'image

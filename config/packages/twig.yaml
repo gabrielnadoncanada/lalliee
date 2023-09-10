@@ -1,0 +1,11 @@
+twig:
+    default_path: '%kernel.project_dir%/templates'
+    form_themes: ['bootstrap_4_layout.html.twig']
+
+    globals:
+        availLocales: ['fr', 'en']
+        chiens: '@app.chiens'
+        partenaires: '@app.partenaires'
+        faqs: '@app.faqs'
+        services: '@app.services'
+        equipes: '@app.equipes'

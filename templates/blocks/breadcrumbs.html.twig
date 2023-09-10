@@ -1,0 +1,25 @@
+<section class="breadcrumbs-custom">
+    <div class="parallax-container">
+        <div class="material-parallax parallax">
+            <img src="{{ asset('build/images/breadcrumbs-bg.jpg') }}" alt="">
+        </div>
+        <div class="breadcrumbs-custom-body parallax-content context-dark">
+            <div class="container">
+
+                <h2 class="breadcrumbs-custom-title">{{ items|last.title }}</h2>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="breadcrumbs-custom-footer">
+        <div class="container">
+            <ul class="breadcrumbs-custom-path">
+                <li><a href="/">Accueil</a></li>
+                {% for item in items %}
+                    <li class="{{ loop.last ? 'active' : '' }}"><a href="{{ item.url }}">{{ item.title }}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</section>

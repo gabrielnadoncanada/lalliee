@@ -1,0 +1,98 @@
+<section class="section parallax-container" data-parallax-img="images/bg-cta-1.jpg">
+    <div class="material-parallax parallax"><img src="{{ asset('build/images/bg-cta-1.jpg') }}" alt=""
+                                                 style="display: block; transform: translate3d(-50%, 90px, 0px);"></div>
+    <div class="parallax-content section-xxl context-light text-md-left">
+        <div class="container">
+            <div class="row row-30 justify-content-center align-items-center ">
+                <div class="col-12 text-center">
+                    <h3 class="text-spacing-100 wow fadeInLeft"
+                        style="visibility: visible; animation-name: fadeInLeft;">Aider <span class="font-weight-light">la cause </span>
+                    </h3>
+                    <p class="wow fadeInLeft" data-wow-delay=".1s"
+                       style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">Supporter le
+                        groupe de L'Alliee Chien d'Assistance</p>
+                </div>
+                <div class="col-12 inset-lg-bottom-10 text-center">
+                    <div class="form-button wow fadeInRight" style="visibility: visible; animation-name: fadeInRight;">
+                        <a target="_blank" rel="noreferrer" class="button button-zakaria button-lg button-primary"
+                           href="https://ca.gofundme.com/f/aidernous-offrir-un-chien-dassistance?qid=19c976ad0965d281d672dcb1efd34af9&fbclid=IwAR26B4mx6s965lzALxVeKAd0HHSUT9CCZi3tpAobWlOe0-yrJjMMtRMPTpY">
+                            Faire un don
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="section footer-modern">
+    <div class="footer-modern-body section-xl">
+        <div class="container">
+            <div class="row row-40 row-md-50 justify-content-xl-between">
+                <div class="col-md-10 col-lg-3 col-xl-4 wow fadeInRight"
+                >
+                    <div class="inset-xl-right-70">
+                        <h5 class="footer-modern-title">Nos Chiens</h5>
+                        <div class="row row-10 gutters-10">
+                            {% set ctn = 1 %}
+                            {% for chien in chiens.getAll(app.request) %}
+                                {% if chien.image and ctn < 7 %}
+                                    <div class="col-4 col-sm-2 col-lg-4">
+                                        <a class="thumbnail-minimal"
+                                           href="/chiens"
+                                        ><img
+                                                    src="{{ '/uploads/files/' ~ chien.image }}"
+                                                    alt="{{ chien.title }}" width="178"
+                                                    height="178"></a>
+                                    </div>
+                                    {% set ctn = ctn + 1 %}
+                                {% endif %}
+                            {% endfor %}
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6  col-lg-5 wow fadeInRight" data-wow-delay=".1s">
+                    <h5 class="footer-modern-title">Navigation</h5>
+                    <ul class="footer-modern-list footer-modern-list-2 d-sm-inline-block d-md-block">
+                        <li><a href="/services">Services</a></li>
+                        <li><a href="/chiens">Nos Chiens</a></li>
+                        <li><a href="/equipe">Équipe</a></li>
+                        <li><a href="/faqs">FAQs</a></li>
+                        <li><a href="/contact">Nous joindre</a></li>
+
+                    </ul>
+                </div>
+                <div class="col-sm-6  col-lg-4 col-xl-3 wow fadeInRight" data-wow-delay=".2s">
+                    <h5 class="footer-modern-title">Entrer en contact</h5>
+                    <ul class="contacts-creative">
+
+                        <li>
+                            <div class="unit unit-spacing-sm flex-column flex-md-row">
+                                <div class="unit-left"><span class="icon mdi mdi-email-outline linear-icon"></span>
+                                </div>
+                                <div class="unit-body"><a href="mailto:lallieechiendassistance@outlook.com">lallieechiendassistance@outlook.com</a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="list-inline list-social-3 list-inline-sm ">
+                        <li><a class="icon mdi mdi-facebook  icon-xxs" target="_blank"
+                               href="https://www.facebook.com/Lalli%C3%A9e-Chien-dassistance-109033314153972"></a></li>
+                        <li><a class="icon mdi mdi-instagram  icon-xxs" target="_blank"
+                               href="https://www.instagram.com/lalliee_chien_dassistance/"></a></li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-modern-panel text-center">
+        <div class="container">
+            <p class="rights"><span>©&nbsp;</span><span class="copyright-year">2021</span><span>&nbsp;</span><span>L’allié[e] Chien d'assistance</span><span>. All Rights Reserved.&nbsp;</span>
+            </p>
+        </div>
+    </div>
+</footer>

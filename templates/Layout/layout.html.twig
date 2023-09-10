@@ -1,0 +1,29 @@
+{% extends 'Layout/base.html.twig' %}
+
+
+{% block stylesheets %}
+    {% include 'Layout/_partial/_stylesheet.html.twig' %}
+{% endblock %}
+
+{% block body %}
+<div class="page">
+    {% block header %}
+        {% include 'blocks/header.html.twig' %}
+
+    {% endblock %}
+
+    {% block main %}
+
+    {% endblock %}
+
+    {% block footer %}
+        {% include 'blocks/footer.html.twig' %}
+
+    {% endblock %}
+</div>
+
+
+{% endblock %}
+{% block javascripts %}
+    {% include 'Layout/_partial/_javascript.html.twig' %}
+{% endblock %}

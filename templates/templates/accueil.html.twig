@@ -1,0 +1,22 @@
+{% extends 'Layout/layout.html.twig' %}
+
+{% block main %}
+    {% include 'blocks/hero.html.twig' %}
+    {% include 'blocks/featured-services.html.twig' %}
+    <section class="section section-xxl ">
+        <div class="container">
+            <h3 class="wow fadeScale">Nos Commanditaires</h3>
+            <div class="owl-carousel owl-style-2" data-items="2" data-sm-items="3" data-md-items="4" data-lg-items="5"
+                 data-margin="30" data-dots="true">
+                {% for partenaire in partenaires.getAll(app.request) %}
+                    {% if partenaire.image is defined and partenaire.image != "" %}
+                        <a class="clients-classic">
+                            <img
+                                    src="{{ '/uploads/files/' ~ partenaire.image   }}" alt="" width="120" height="114">
+                        </a>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+{% endblock %}

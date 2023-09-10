@@ -1,0 +1,11 @@
+controller:
+  profile:
+    name: Profil
+    index: Profils
+    new: Nouveau profil
+    edit: Édition du profil
+  project:
+    name: Projet
+    index: Projets
+    new: Nouveau projet
+    edit: Édition du projet

@@ -1,0 +1,47 @@
+site:
+  titre:
+    accueil: Accueil
+    realisation: Réalisations
+    aPropos: A propos
+    services: Services
+    nousJoindre: Nous joindre
+  boutons:
+    enSavoirPlus: En savoir plus
+    service: Services
+    parlonsEn: Parlons-en
+    cuisine: Cuisine
+    salleDeBain: Salle de bain
+    mobiliersMesure: Mobiliers sur mesure
+    retour: Retour à l'accueil
+  liens:
+    aPropos: /a-propos
+    services: /services
+    realisation: /realisation
+    nousJoindre: /nous-joindre
+  footer:
+    joursOuverture:
+      lundi: Lundi au vendredi
+      soir: Soirs et samedi
+      dimanche: Dimanche
+    heuresOuverture:
+      heureLundi: 9&nbsp;h à 17&nbsp;h
+      heureSoir: Sur rendez-vous
+      heureDimanche: Fermé
+    adresse: 1775, Yvonne-Huot, Lévis, QC, Canada
+    codePostal: G7A 5N4
+    telephone: Tel.&nbsp;&#58;
+  contenu:
+    projet:
+      titre: Vous avez un projet&nbsp;?
+      texte: 'De style contemporains, classiques ou
+      moderne, nous travaillons ensemble pour créer un lieu de vie que vous pourrez fièrement
+        appeler « chez moi ». Nos experts dévoués sauront vous conseiller et vous informer, pour
+        transposer vos idées en espace de rêve.'
+      lien: /nous-joindre
+      lienTexte: Parlons-en
+    contact:
+      titre: Vous aimez ce que vous avez vu&nbsp;?
+      texte: 'N’hésitez pas à nous écrire ou nous téléphoner afin de prendre rendez-vous ou pour obtenir de
+        plus amples informations.'
+      tel: 1-800-555-2301
+

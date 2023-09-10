@@ -1,0 +1,55 @@
+{% extends 'Layout/layout.html.twig' %}
+
+{% block main %}
+    {% set items = {
+        1: {
+            'title': 'Faqs',
+            'url': '/faqs'
+        }
+    }
+    %}
+    {% include 'blocks/breadcrumbs.html.twig' with items %}
+
+    <section class="section section-xl bg-default">
+        <div class="container">
+            <div class="row row-30 box-ordered">
+                <div class="col-12 col-md-12">
+                    <article class="box-icon-modern">
+                        <div class="card-group-custom card-group-corporate" id="accordion1" role="tablist"
+                             aria-multiselectable="false">
+                            <div class="row">
+                                {% for faq in faqs %}
+                                    <article class="col-12 col-lg-6 card card-custom card-corporate">
+                                        <div class="card-header" role="tab">
+                                            <div class="card-title">
+                                                <a id="accordion1-card-head-txrulfew" data-toggle="collapse"
+                                                   data-parent="#accordion1"
+                                                   href="#{{ 'accordion-card-body'~loop.index }}"
+                                                   aria-controls="{{ 'accordion-card-body'~loop.index }}"
+                                                   aria-expanded="true" role="button">
+                                                    {{ faq.title }}
+                                                    <div class="card-arrow">
+                                                        <div class="icon"></div>
+                                                    </div>
+                                                </a></div>
+                                        </div>
+                                        <div class="collapse {{ loop.index == 1 ? 'show' : '' }}"
+                                             id="{{ 'accordion-card-body'~loop.index }}"
+                                             aria-labelledby="accordion1-card-head-txrulfew" data-parent="#accordion1"
+                                             role="tabpanel">
+                                            <div class="card-body">
+                                                <p>{{ faq.answer }}</p>
+                                            </div>
+                                        </div>
+                                    </article>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

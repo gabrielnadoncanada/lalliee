@@ -1,0 +1,70 @@
+<header class="section page-header">
+    <div class="rd-navbar-wrap">
+        <nav class="rd-navbar rd-navbar-modern" data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed"
+             data-md-layout="rd-navbar-fixed" data-md-device-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-fixed"
+             data-lg-device-layout="rd-navbar-fixed" data-xl-layout="rd-navbar-fixed"
+             data-xl-device-layout="rd-navbar-fixed" data-xxl-layout="rd-navbar-fixed"
+             data-xxl-device-layout="rd-navbar-fixed" data-lg-stick-up-offset="100px" data-xl-stick-up-offset="120px"
+             data-xxl-stick-up-offset="140px" data-lg-stick-up="false" data-xl-stick-up="false" data-xxl-stick-up="false">
+
+            <div class="rd-navbar-aside-outer">
+                <div class="rd-navbar-aside">
+
+                    <div class="rd-navbar-panel justify-content-between">
+
+                        <div class="rd-navbar-brand justify-content-lg-start"><a class="brand" href="/">
+                                <img class="brand-logo-dark"
+                                     src="/build/images/logo-default-336x120.svg"
+                                     alt="" width="100%"
+                                /></a>
+                        </div>
+                        <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span>
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+            <div class="rd-navbar-main-outer">
+                <div class="rd-navbar-main">
+                    <div class="rd-navbar-nav-wrap">
+                        <!-- RD Navbar Nav-->
+                        <ul class="rd-navbar-nav">
+
+                            <li class="rd-nav-item">
+                                <a class="rd-nav-link" href="/services">Nos services</a>
+                                <ul class="rd-menu rd-navbar-dropdown">
+                                    {% for service in services.getAll(app.request) %}
+                                        <li class="rd-dropdown-item">
+                                            <a class="rd-dropdown-link"
+                                               href="/services/{{ service.url }}">{{ service.title }}</a>
+                                        </li>
+                                    {% endfor %}
+                                </ul>
+                            </li>
+
+                            <li class="rd-nav-item"><a class="rd-nav-link" href="/chiens">Nos chiens</a>
+                            </li>
+                            <li class="rd-nav-item">
+                                <a class="rd-nav-link" href="/equipe">Notre équipe</a>
+                                <ul class="rd-menu rd-navbar-dropdown">
+                                    {% for equipe in equipes.getAll(app.request) %}
+                                        <li class="rd-dropdown-item">
+                                            <a class="rd-dropdown-link"
+                                               href="/equipe/{{ equipe.url }}">{{ equipe.title }}</a>
+                                        </li>
+                                    {% endfor %}
+                                </ul>
+                            </li>
+                            <li class="rd-nav-item"><a class="rd-nav-link" href="/faqs">Faqs</a>
+                            </li>
+{#                            <li class="rd-nav-item"><a class="rd-nav-link" href="/contact">Nous joindre</a>#}
+{#                            </li>#}
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </nav>
+    </div>
+</header>
+

@@ -1,0 +1,64 @@
+{% extends 'Layout/layout.html.twig' %}
+
+{% block main %}
+
+    {% set items = {
+        1: {
+            'title': 'Nous joindre',
+            'url': '/contact'
+        }
+    }
+    %}
+    {% include 'blocks/breadcrumbs.html.twig' with items %}
+
+    <section class="section section-lg section-first bg-default text-md-left">
+        <div class="container">
+            <h3>Contactez-nous</h3>
+            <form class="rd-form rd-mailform"  method="post" action="/send" novalidate="novalidate">
+                <div class="row row-20 row-md-30">
+                    <div class="col-lg-8">
+                        <div class="row row-20 row-md-30">
+                            <div class="col-sm-6">
+                                <div class="form-wrap">
+                                    <input class="form-input form-control-has-validation" id="contact-first-name-2" type="text" name="prenom" data-constraints="@Required"><span class="form-validation"></span>
+                                    <label class="form-label rd-input-label" for="contact-first-name-2">Prénom</label>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-wrap">
+                                    <input class="form-input form-control-has-validation" id="contact-last-name-2" type="text" name="nom" data-constraints="@Required"><span class="form-validation"></span>
+                                    <label class="form-label rd-input-label" for="contact-last-name-2">Nom</label>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-wrap">
+                                    <input class="form-input form-control-has-validation" id="contact-email-2" type="email" name="email" data-constraints="@Email @Required"><span class="form-validation"></span>
+                                    <label class="form-label rd-input-label" for="contact-email-2">E-mail</label>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-wrap">
+                                    <input class="form-input form-control-has-validation" id="contact-phone-2" type="text" name="phone" data-constraints="@Numeric"><span class="form-validation"></span>
+                                    <label class="form-label rd-input-label" for="contact-phone-2">Téléphone</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="form-wrap">
+                            <label class="form-label rd-input-label" for="contact-message-2">Message</label>
+                            <textarea class="form-input textarea-lg form-control-has-validation form-control-last-child" id="contact-message-2" name="message" data-constraints="@Required"></textarea><span class="form-validation"></span>
+                        </div>
+                    </div>
+                </div>
+                <button class="button button-lg button-primary button-zakaria" type="submit">Envoyer</button>
+            </form>
+        </div>
+    </section>
+
+
+{% endblock %}
+
+
+
+

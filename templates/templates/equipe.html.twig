@@ -1,0 +1,34 @@
+{% extends 'Layout/layout.html.twig' %}
+
+{% block main %}
+
+    {% set items = {
+        1: {
+            'title': 'Équipe',
+            'url': '/equipe'
+        },
+        2: {
+            'title': equipe.title,
+            'url': equipe.url
+        }
+    }
+    %}
+    {% include 'blocks/breadcrumbs.html.twig' with items %}
+
+    {% if equipe.description is defined %}
+
+        <section class="section section-xl bg-default">
+            <div class="container">
+                <div class="row row-30 box-ordered">
+                    <div class="col-12 col-md-9">
+                        <article class="box-icon-modern">
+                            {{ equipe.description|raw }}
+                        </article>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    {% endif %}
+
+{% endblock %}

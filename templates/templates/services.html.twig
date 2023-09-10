@@ -1,0 +1,39 @@
+{% extends 'Layout/layout.html.twig' %}
+
+{% block main %}
+    {% set items = {
+        1: {
+            'title': 'Services',
+            'url': '/services'
+        }
+    }
+    %}
+    {% include 'blocks/breadcrumbs.html.twig' with items %}
+
+    <section class="section section-xl bg-default">
+        <div class="container">
+            <div class="row row-30">
+                {% for service in services.getAll(app.request) %}
+                    <div class="col-sm-6 col-lg-4">
+                        <article class="post post-classic box-md"><a class="post-classic-figure"
+                                                                     href="/services/{{ service.url }}"><img
+                                        src="{{ '/uploads/files/' ~ service.image }}" alt="" width="370" height="276"></a>
+                            <div class="post-classic-content">
+                                <h5 class="post-classic-title"><a href="/services/{{ service.url }}">{{ service.title }}</a>
+                                </h5>
+                                {% if service.sommaire is defined %}
+                                    <p class="post-classic-text">{{ service.sommaire }}</p>
+                                {% endif %}
+                            </div>
+                        </article>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+{% endblock %}
+
+
+
+

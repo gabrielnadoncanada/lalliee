@@ -1,0 +1,36 @@
+{% extends 'Layout/layout.html.twig' %}
+
+{% block main %}
+
+    {% set items = {
+        1: {
+            'title': 'Chiens',
+            'url': '/chiens'
+        }
+    }
+    %}
+    {% include 'blocks/breadcrumbs.html.twig' with items %}
+    <section class="section section-xl bg-default">
+        <div class="container">
+            <div class="row row-30">
+                {% for chien in chiens.getAll(app.request) %}
+                    <div class="col-sm-6 col-lg-4">
+                        <!-- Post Classic-->
+                        <article class="post post-classic box-md">
+
+                                {% set img = chien.image ?  '/uploads/files/' ~ chien.image  : '/build/images/dog-placeholder.jpg' %}
+                                <img
+                                        src="{{ img }}" alt="" width="370"
+                                        height="370">
+
+                            <div class="post-classic-content">
+                                <h3 class="post-classic-title">{{ chien.title }}</h3>
+                                <h5> {{ chien.status }}</h5>
+                            </div>
+                        </article>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+{% endblock %}

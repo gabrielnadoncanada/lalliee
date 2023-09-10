@@ -1,0 +1,17 @@
+<section id="services" class="section section-xl section-last bg-default ">
+    <div class="container">
+        <h3 class="wow fadeScale">Nos Services</h3>
+        <!-- Owl Carousel-->
+        <div class="owl-carousel owl-style-8" data-loop="false" data-items="1" data-sm-items="2" data-lg-items="3"
+             data-margin="30" data-dots="true" data-mouse-drag="false">
+            {% for service in services.getAll(app.request) %}
+                <article class="box-info-modern wow slideInUp" data-wow-delay=".1s"><a
+                            class="box-info-modern-figure link-img" href="/services/{{ service.url }}"><img
+                                src="{{ '/uploads/files/' ~ service.image  }}" alt="" width="370" height="276"></a>
+                    <h4 class="box-info-modern-title"><a href="/services/{{ service.url }}">{{ service.title }}</a></h4><a
+                            class="box-info-modern-link" href="/services/{{ service.url }}">en savoir plus</a>
+                </article>
+            {% endfor %}
+        </div>
+    </div>
+</section>
